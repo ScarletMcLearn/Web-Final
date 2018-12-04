@@ -35,8 +35,8 @@
         task.notes = $('#notes').val();
         $.ajax({
           method:"POST",
-          url:"/article/create",
-          data: article
+          url:"/task/create",
+          data: task
         }).done(function(response){
           console.log(response);
         }).fail(function(response){
@@ -44,10 +44,10 @@
         });
       });
 
-      $('#getArticles').click(function(event){
+      $('#getTasks').click(function(event){
         $.ajax({
           method:"GET",
-          url:"/article/list"
+          url:"/task/list"
         }).done(function(response){
           console.log(response);
         }).fail(function(response){
