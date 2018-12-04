@@ -42,19 +42,26 @@ var Task = mongoose.model('Task', taskSchema)
 
 
 
+// app.use('/static', express.static('public'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/', function(request, response){
-  response.sendFile(__dirname+'/index.html');
+  response.sendFile(__dirname+'/index.ejs');
 });
 
 app.get('/about-page', function(request, response){
-  response.sendFile(__dirname+'/about.html');
+  response.sendFile(__dirname+'/about.ejs');
 });
 
 app.get('/new-task', function(request, response){
-  response.sendFile(__dirname+'/form.html');
+  response.sendFile(__dirname+'/form.ejs');
 });
 
 var task = [];

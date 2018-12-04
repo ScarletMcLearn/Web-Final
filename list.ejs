@@ -15,11 +15,10 @@
         
         <ul>
           <% for ( var i = 0; i< tasks.length; i++){ %>
-            <li><%= tasks[i].item %></li><br>
+          
+            <li href='/task/ +  <%= tasks[i].id %>'><%= tasks[i].task-name %></li><br>
             
-            <li><%= tasks[i].item %></li><br>
-            
-            <li><%= tasks[i].item %></li><br>
+         
                   
                   <% } %>
         </ul>
