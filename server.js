@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 
 //for c9
 var db;
-var db_url = "mongodb://"+process.env.IP+":27017"
+var db_url = "mongodb://"+process.env.IP+":27017";
 
 /* CW 9b*/
 var mongoose = require("mongoose");
@@ -19,7 +19,7 @@ mongoose.connect(db_url+"/node-cw9");
 mongoose.connection.on('error', function(err){
   console.log(err);
   console.log('Could not connect to mongodb');
-})
+});
 
 var Schema = mongoose.Schema;
 
